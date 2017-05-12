@@ -1,0 +1,39 @@
+.num {
+	margin: 0;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+}
+.box {
+	position: fixed;
+	top: 100px;
+	width: 200px;
+	height: 200px;
+}
+#neko{
+    top: 500px;
+}
+#nami{
+    top: 300px;
+}
+#sima{
+    background: url('../img/sima.png') no-repeat;
+    background-size: contain;
+    width: 260px;
+    height: 100px;
+    top: 700px;
+}
+#fune2{
+    background: url('../img/fune2.png') no-repeat;
+    width: 320px;
+    top: 590px;
+}
+#nami3{
+    top: 600px;
+}
+#nami4{
+    top: 400px;
+}
+#nami5{
+    top: 200px;
+}
