@@ -111,6 +111,7 @@ nav a:hover{
     background: url("../img/nikukyu.png") no-repeat;
     background-size: contain;
     color: #5a3333;
+    
 }
 
 
@@ -208,5 +209,41 @@ footer{
     
 
 @media (max-width: 767px) {
-   
+    body{
+    height: 100vh;
+    }
+    #wrapper1{
+        display: none;
+    }
+    #wrapper3{
+        display: none;
+    }
+    .col-6{
+    clear: both;
+    }
+    .container{
+    width: 80%;
+        margin: 20px auto;
+    }
+#top img{
+    left: 10%;
+}
+    h3{
+        margin-top: 0;
+    }
+    #about img{
+        margin: 0;
+    }
+.image-s{
+    width: 40%;
+    margin: 10px;
+}
+.image-m{
+    width: 40%;
+    margin: 10px;
+ }
+.image-l{
+    width: 40%;
+    margin: 10px;
+}  
 }
