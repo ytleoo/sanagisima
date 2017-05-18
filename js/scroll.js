@@ -1,3 +1,9 @@
+
+/*var width = $(window).width();
+if(width <= 768){
+    
+    
+}else{*/
 $(function () {
     //初期値
     var nekoLeft = 3000;
@@ -7,8 +13,8 @@ $(function () {
     var nami3Left = -2000;
     var nami4Left = 2400;
     var nami5Left = -3000;
-    var simaLeft = -4500;
-    var fune2Left = 4000;
+    var simaLeft = -4750;
+    var fune2Left = 4140;
     
     
     $(window).scroll(function() {
@@ -28,11 +34,9 @@ $(function () {
         $("#nami4").css("left", nami4Left - value / 4);
         $("#nami5").css("left", nami5Left + value / 2);
         //島
-                $("#sima").css("left", simaLeft + 100 + value / 2 );
-            
-                $("#fune2").css("left", fune2Left - value / 2.7);
+     
+        $("#sima").css("left", simaLeft + 100 + value / 2 );
+        $("#fune2").css("left", fune2Left - value / 2.7);
         
 });
 });
-    
-                 
