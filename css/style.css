@@ -26,7 +26,10 @@ body{
     position: relative;
     z-index: 3;
 }
-    
+ #wrapper5{
+    position: relative;
+    z-index: 4;
+}   
 .container{
     width: 960px;
     margin: 40px auto;
@@ -87,7 +90,9 @@ header img{
     height: 20px;
     display: inline;
 }
-
+#dmenu{
+    display: none;
+}
 nav{
     overflow: hidden;
     float: right;
@@ -225,6 +230,54 @@ footer{
     width: 80%;
         margin: 20px auto;
     }
+    nav{
+    display: none;
+    }
+    
+    #dmenu{
+    position: fixed;
+    right: 0px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #211e1e;
+}
+#dmenu li{
+    float: left;
+    position: relative;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.71);
+    display: block;
+}
+ul.child{
+        display: none;
+        position: absolute;
+        margin-left: -10px;
+        padding: 0;
+}
+ul.child li a{
+    padding: 5px 10px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    display: block;
+    color: #454343;
+    text-decoration: none;
+    text-align: left;
+}
+li a:hover{
+    background: url("../img/nikukyu.png") no-repeat;
+    background-size: contain;
+    background-position: right;
+    color: #5a3333;
+    
+}
+
 #top img{
     left: 10%;
 }
