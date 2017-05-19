@@ -1,7 +1,6 @@
 $(function(){
-    $('#dmenu li').hover(function(){
-        $("ul:not(:animated)", this).slideDown();
-    }, function(){
-        $("ul.child",this).slideUp();
+    $("#dmenu li").on("click", function() {
+        $("ul.child").slideToggle();
+        $('header').toggleClass('openNav');
     });
 });
