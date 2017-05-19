@@ -13,6 +13,7 @@ $(function () {
     var nami3Left = -2000;
     var nami4Left = 2400;
     var nami5Left = -3000;
+    var nami6Left = 4500;
     var simaLeft = -4750;
     var fune2Left = 4140;
     
@@ -25,14 +26,15 @@ $(function () {
         $("#neko").css("left", nekoLeft - value / 2);
         
         //船
-        $("#fune").css("left", funeLeft - value / 4);
+        $("#fune").css("left", funeLeft - value / 6);
         
         //波
         $("#nami").css("left", namiLeft + value / 3);
-        $("#nami2").css("left", nami2Left - value / 4);
+        $("#nami2").css("left", nami2Left - value / 2);
         $("#nami3").css("left", nami3Left + value / 2);
         $("#nami4").css("left", nami4Left - value / 4);
         $("#nami5").css("left", nami5Left + value / 2);
+         $("#nami6").css("left", nami6Left - value / 2);
         //島
      
         $("#sima").css("left", simaLeft + 100 + value / 2 );
