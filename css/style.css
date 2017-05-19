@@ -292,6 +292,9 @@ footer {
     text-align: center;
 }
 
+
+
+
 @media (max-width: 768px) {
     body {
         height: 100vh;
@@ -347,7 +350,7 @@ footer {
         width: 100px;
         padding-top: 2px;
     }
-    #navToggle {
+  #navToggle {
         position: absolute;
         /*bodyに対しての絶対位置指定*/
         right: -7px;
@@ -392,12 +395,13 @@ footer {
         -moz-transform: rotate(45deg);
         transform: rotate(45deg)
     }
-    .openNav #navToggle span:nth-child(3) {
-        top: 11px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg)
-    }
+
+.openNav #navToggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
     ul {
         list-style-type: none;
         margin: 0;
@@ -509,14 +513,10 @@ footer {
         filter: alpha(opacity=50);
         text-align: center;
     }
-    /* this is for IE6 . If you want to have the lightbox scroll with the page in ALL browsers then remove the * html 
-* html .lightbox {position:absolute;}
-* html .lightbox .light {position:absolute; height:5000px;}*/
     .lightbox .box {
         width: 85%;
         height: auto;
         background: #fff;
-        /*        border: 10px solid #fff;*/
         border-width: 10px;
         margin: 0 auto;
         position: relative;
@@ -656,15 +656,6 @@ footer {
     #p032:target {
         display: block;
     }
-    /*#p001:target .box img,
-#p002:target .box img,
-#p003:target .box img,
-#p004:target .box img,
-#p005:target .box img,
-#p006:target .box img {
-    -webkit-animation-name: fadeIn; 
-    -webkit-animation-duration: 1.5s; 
-}*/
     #access {
         margin-bottom: 20px;
     }
