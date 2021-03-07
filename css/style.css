@@ -193,10 +193,14 @@ nav a:hover {
     position: relative;
 }
 
-#top img {
+.topimg {
     position: absolute;
-    top: 10%;
-    left: 40%;
+    top: 15%;
+    left: 45%;
+}
+
+.topimg-s {
+    display: none;
 }
 
 #about {
@@ -288,7 +292,10 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+
+
+
+@media (max-width: 768px) {
     body {
         height: 100vh;
         font-size: 60%;
@@ -296,7 +303,7 @@ footer {
     h3 {
         font-size: 2rem;
     }
-    h2{
+    h2 {
         font-size: 20px;
     }
     #wrapper1 {
@@ -320,15 +327,18 @@ footer {
         width: 100%;
     }
     .container {
-        width: 300px;
+        width: 85%;
         margin: 20px auto;
     }
     #top {
         background-position: 30% bottom;
     }
+    header {
+        background: #fff;
+    }
     .header-container {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
     nav {
         display: none;
@@ -337,7 +347,61 @@ footer {
         display: inline-block;
         position: fixed;
         right: 0px;
+        width: 100px;
+        padding-top: 2px;
     }
+  #navToggle {
+        position: absolute;
+        /*bodyに対しての絶対位置指定*/
+        right: -7px;
+        top: 0px;
+        width: 26px;
+        height: 25px;
+        cursor: pointer;
+    }
+    #navToggle div {
+        position: relative;
+    }
+    /*spanの絶対位置指定の親にします*/
+    #navToggle span {
+        display: block;
+        position: absolute;
+        /*#navToggle div に対して*/
+        width: 100%;
+        border-bottom: solid 3px #999;
+        -webkit-transition: .35s ease-in-out;
+        -moz-transition: .35s ease-in-out;
+        transition: .35s ease-in-out
+    }
+    #navToggle span:nth-child(1) {
+        top: 0
+    }
+    #navToggle span:nth-child(2) {
+        top: 9px
+    }
+    #navToggle span:nth-child(3) {
+        top: 18px
+    }
+    .openNav #navToggle span:nth-child(1) {
+        top: 11px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+    .openNav #navToggle span:nth-child(2) {
+        display: none;
+        top: 11px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+.openNav #navToggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
     ul {
         list-style-type: none;
         margin: 0;
@@ -346,23 +410,26 @@ footer {
         font-size: 10px;
     }
     #dmenu li {
-        float: left;
+        /*        float: left;*/
         position: relative;
         text-align: center;
         margin: 7px;
+        margin-top: 2px;
         padding: 10px;
-        background: rgba(255, 255, 255, 0);
+        padding-left: 17px;
         display: block;
         width: 70px;
     }
     ul.child {
         display: none;
         position: absolute;
-        margin-left: -13px;
-        margin-top: 7px;
+        margin-left: -17px;
+        top: 35px;
         padding: 0;
-        background: rgba(255, 255, 255, 0.3);
+        width: 100px;
+        background: #fff;
     }
+    
     ul.child li a {
         padding: 5px 10px;
         margin-left: -5px;
@@ -379,19 +446,21 @@ footer {
         background-position: right;
         color: #5a3333;
     }
-    .topimg {
-        width: 60%;
+    .topimg-s {
+        display: block;
+        position: absolute;
+        width: 35%;
+        transform: translate(-75%, -30%);
+        left: 75%;
+        top: 30%;
     }
-    #top img {
+    .topimg {
         display: none;
-        transform: translate(-100%, -20%);
-        left: 100%;
-        top: 20%;
     }
     h3 {
         margin: 45px 0;
     }
-    #about{
+    #about {
         width: 100%;
         padding: 0;
         margin-bottom: 65px;
@@ -400,7 +469,7 @@ footer {
         margin: 0 50px;
         width: 200px;
     }
-    #photo{
+    #photo {
         margin-top: 20px;
     }
     #photo a {
@@ -419,11 +488,10 @@ footer {
         margin: 5px;
     }
     .playbox img {
-        border: 1px solid #000;
-        margin: 5px;
+        margin: 4px;
     }
     .lightbox {
-        margin-top: 100px;
+        margin-top: 150px;
         width: 100%;
         height: 100%;
         display: none;
@@ -445,14 +513,10 @@ footer {
         filter: alpha(opacity=50);
         text-align: center;
     }
-    /* this is for IE6 . If you want to have the lightbox scroll with the page in ALL browsers then remove the * html 
-* html .lightbox {position:absolute;}
-* html .lightbox .light {position:absolute; height:5000px;}*/
     .lightbox .box {
-        width: 300px;
-        height: 250px;
+        width: 85%;
+        height: auto;
         background: #fff;
-        border: 10px solid #fff;
         border-width: 10px;
         margin: 0 auto;
         position: relative;
@@ -460,9 +524,9 @@ footer {
     }
     .lightbox .box img {
         display: block;
-        margin: 0 auto;
+        margin: 10px auto;
         position: relative;
-        width: 100%;
+        width: 95%;
     }
     .lightbox .box p {
         width: 300px;
@@ -474,10 +538,10 @@ footer {
     }
     .lightbox .functions {
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: 8px;
+        left: 0px;
         height: 30px;
-        width: 300px;
+        width: 100%;
         background: #fff;
         text-align: center;
     }
@@ -490,35 +554,12 @@ footer {
         padding: 0 20px;
     }
     .lightbox .box a.closebox:hover {
-        color: #f00;
+        color: #339852;
     }
     .lightbox .previous:hover,
     .lightbox .next:hover {
-        color: #080;
+        color: #93c5e0;
     }
-    /*.lightbox .box2 {width:500px; background:#444; border:10px solid #fff; margin:0 auto; padding:10px; position:relative;
--o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
--icab-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
--khtml-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
--moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
--webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-.lightbox .box2 h3 {color:#fff; font-size:22px; padding:10px 0; margin:0;}
-.lightbox .box2 p {width:500px; padding:5px 0; margin:0; color:#fff; text-align:left; font-size:12px; line-height:18px;}
-.lightbox .box2 a {color:#fc0;}
-.lightbox .box2 a:hover {color:#ff0; text-decoration:none;}
-.lightbox .box2 a.closebox {display:block; width:25px; height:30px; background:#444; color:#fff; font-weight:bold; font-size:26px; text-decoration:none; text-align:center; position:absolute; right:-1px; bottom:-1px; border:1px solid #fff;}
-.lightbox .box2 a.closebox:hover {color:#f00;}
- */
-    /*@-webkit-keyframes fadeIn {
-    0% {
-        opacity:0;
-    }
-    100% { 
-        opacity:100;
-    }
-}*/
     #p001:target {
         display: block;
     }
@@ -615,26 +656,17 @@ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     #p032:target {
         display: block;
     }
-    /*#p001:target .box img,
-#p002:target .box img,
-#p003:target .box img,
-#p004:target .box img,
-#p005:target .box img,
-#p006:target .box img {
-    -webkit-animation-name: fadeIn; 
-    -webkit-animation-duration: 1.5s; 
-}*/
-    #access{
+    #access {
         margin-bottom: 20px;
     }
     #access p {
         margin: 0;
     }
     #access table {
-        width: 300px;
+        width: 100%;
         margin-bottom: 15px;
     }
-    #access h4{
+    #access h4 {
         margin-top: 20px;
     }
     td {
@@ -644,9 +676,9 @@ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
     th {
         width: 30px;
-        padding:5px;
+        padding: 5px;
     }
-    footer{
+    footer {
         font-size: 60%;
     }
 }
