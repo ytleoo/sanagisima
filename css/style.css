@@ -357,10 +357,11 @@ footer {
         top: 0px;
         width: 26px;
         height: 25px;
-        cursor: pointer;
+        cursor: pointer
     }
     #navToggle div {
-        position: relative;
+        position: relative
+
     }
     /*spanの絶対位置指定の親にします*/
     #navToggle span {
@@ -429,7 +430,9 @@ footer {
         width: 100px;
         background: #fff;
     }
-    
+
+    ul.child li {}
+
     ul.child li a {
         padding: 5px 10px;
         margin-left: -5px;
